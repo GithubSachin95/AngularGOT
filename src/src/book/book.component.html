@@ -1,0 +1,25 @@
+<div *ngIf="book">
+<div class="jumbotron">
+  <h1 class="display-4">{{book.name}}</h1>
+  <p class="lead"><span>Release Date : </span>{{book.released | date}}</p>
+  <hr class="my-4">
+  <p><span>Author : </span>{{book.authors}}</p>
+  <p><span>Country : </span>{{book.country}}</p>
+  <p><span>Publisher : </span>{{book.publisher}}</p>
+  <p><span>No. of pages : </span>{{book.numberOfPages}}</p>
+  <p><span>ISBN : </span>{{book.isbn}}</p>
+</div>
+</div>
+<button (click)="goBack()">Go Back</button>
+<div *ngIf="charactersArray">
+<span >List of characters : </span>
+  <div *ngFor="let character of charactersArray">
+    <div class="row">
+   <div class="col-sm-4 col-md-4">
+  <a [routerLink]="['/character', character.url | id:'/']">{{character.name}}</a>
+</div>
+
+
+</div>
+
+</div>

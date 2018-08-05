@@ -1,0 +1,23 @@
+<div *ngIf="house">
+<div class="jumbotron">
+  <h1 class="display-4">{{house.name}}</h1>
+  <p class="lead"><span>Coat Of Arms : </span>{{house.coatOfArms}}</p>
+  <hr class="my-4">
+  <p><span>Current Lord: </span>{{currentLord}}</p>
+  <p><span>Over Lord : </span>{{overLord}}</p>
+  <p><span>Words : </span>{{house.words}}</p>
+  <p><span>Region : </span>{{house.region}}</p>
+  
+  
+  <div *ngIf="swornMember">
+    <p>Sworn Members : </p>
+  <div *ngFor="let member of swornMember">
+    <p>{{member}}</p>
+  </div>
+</div>
+<button (click)="goBack()">Go Back</button>
+</div>
+</div>
+
+
+

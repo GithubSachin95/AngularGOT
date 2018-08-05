@@ -1,0 +1,38 @@
+<h3>Books</h3>
+<div class="row" pipe>
+  <div *ngFor="let book of books1">
+<div class="card book" style="width:18rem" >
+  <div class="card-body">
+    <h4 class="card-title">{{book.name}}</h4>
+    <p class="card-text">{{book.authors}}</p>
+    <a class="btn btn-primary" [routerLink]="['/book', book.url | id:'/']">Details</a>
+  </div>
+</div>
+</div>
+</div>
+<h3>Characters</h3>
+<div class="row" pipe>
+  <div *ngFor="let character of character1">
+<div class="card character" style="width:18rem">
+  <div class="card-body">
+    <h4 class="card-title">{{character.aliases}}</h4>
+    <p class="card-text">{{character.gender}}</p>
+    <a class="btn btn-primary" [routerLink]="['/character', character.url | id:'/']">Details</a>
+  </div>
+</div>
+</div>
+</div>
+
+<h3>Houses</h3>
+<div class="row" pipe>
+<div *ngFor="let house of house1">
+  <div class="card house" style="width:18rem;">
+  <div class="card-body">
+    <h4 class="card-title">{{house.name}}</h4> 
+    <p class="card-text">{{house.region}}</p> 
+    <a class="btn btn-primary" [routerLink]="['/house' , house.url | id:'/']">Details</a>
+  </div>
+  </div>
+</div>
+
+</div>

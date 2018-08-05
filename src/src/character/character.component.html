@@ -1,0 +1,19 @@
+<div *ngIf="character">
+<div class="jumbotron">
+  <h1 class="display-4">{{character.name}}</h1>
+  <p class="lead"><span>Aliases : </span>{{character.aliases}}</p>
+  <hr class="my-4">
+  <p><span>Played by : </span>{{character.playedBy}}</p>
+  <p><span>Tv series : </span>{{character.tvSeries}}</p>
+  <p><span>Gender : </span>{{character.gender}}</p>
+  <p><span>Culture : </span>{{character.culture}}</p>
+  
+  <p>List of Reference Books : </p>
+  <div *ngIf="referenceBooks">
+  <div *ngFor = "let book of referenceBooks">
+<p>{{book}}</p>
+</div>
+</div>
+<button (click)="goBack()">Go Back</button>
+</div>
+</div>
